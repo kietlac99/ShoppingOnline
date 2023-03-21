@@ -1,0 +1,81 @@
+﻿@model CreateViewModel
+<form action="Create" method="post" enctype="multipart/form-data">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="Name">Product name:</label>
+        </div>
+
+        <div class="col-10">
+            <input asp-for="Name"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="shortDescription">Short Description:</label>
+        </div>
+
+        <div class="col-10">
+            <input asp-for="shortDescription"/>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="longDescription">Long Description:</label>
+        </div>
+
+        <div class="col-10">
+            <input asp-for="longDescription" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="Price">Price:</label>
+        </div>
+
+        <div class="col-10">
+            <input asp-for="Price" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="Instock">Instock:</label>
+        </div>
+
+        <div class="col-10">
+            <input asp-for="Instock" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="Category">Category:</label>
+        </div>
+
+        <div class="col-10">
+            <input asp-for="Category" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-2">
+            <label asp-for="photoPath">Choose Photo:</label>
+        </div>
+
+        <div class="col-10">
+            <input asp-for="photoPath" />
+        </div>
+    </div>
+
+    <p>
+        <div class="d-flex justify-content-sm-start">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </div>
+    </p>
+</form>

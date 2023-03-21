@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Product>
+@foreach(Product p in Model)
+{
+    var path = "~/images/" + p.photoPath;
+    <div class="card">
+        <div class="card-header">
+            <h3>@p.Name</h3>
+        </div>
+
+        <div class="card-body">
+            <img src="@path" class="img-thumbnail" asp-append-version="true"/>
+            <h4 class="text-danger">Price: @p.Price</h4>
+            <h4>Short description: @p.shortDescription</h4>
+            <h4>Details: @p.longDescription</h4>
+        </div>
+
+        <div class="text-center">
+            <a class="btn btn-outline-dark mt-auto" asp-controller="Cart" asp-action="AddToCart" asp-route-id="@p.ID">Add to cart</a>
+        </div>
+    </div>
+
+    
+}
+        
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <a asp-action="Create">Create a new product</a>
+</div>
+
